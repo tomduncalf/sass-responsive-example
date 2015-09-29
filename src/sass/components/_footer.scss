@@ -1,0 +1,13 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  /* Use left margin to center */
+  left: (100% - $container-width) / 2;
+
+  width: $container-width;
+  height: $major-y * 2;
+
+  background: $col-bg-grey;
+  border: 1px solid $col-border-button;
+  border-bottom: 0;
+}

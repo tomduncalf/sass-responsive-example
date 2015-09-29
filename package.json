@@ -1,15 +1,16 @@
 {
-  "name": "css_test",
+  "name": "sass-responsive-example",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Simple SASS responsive layout example",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Tom Duncalf",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-sass": "^2.0.4"
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.0.4",
+    "http-server": "^0.8.5",
+    "node-reset-scss": "^1.0.1",
+    "sass-rem": "^1.2.2"
   }
 }

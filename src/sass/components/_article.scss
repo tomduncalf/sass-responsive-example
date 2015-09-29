@@ -1,0 +1,110 @@
+.article {
+  float: left;
+  width: 100%;
+}
+
+  .article--lead {
+    @include mq-min-width("small") {
+      width: 70%;
+      padding-right: $major-x;
+    }
+  }
+
+  .article--secondary {
+    padding-bottom: $major-y;
+
+    @include mq-min-width("small") {
+      width: 30%;
+      padding-left: $major-x;
+    }
+  }
+
+.article__header {
+  @include rem(font-size, 18px);
+  @extend %font-serif;
+
+  .article--lead & {
+    @include rem(font-size, 20px);
+  }
+
+  .article--secondary & {
+    padding-bottom: $minor-y;
+  }
+}
+
+.article__meta {
+  padding-top: $minor-y / 2;
+  margin-bottom: $minor-y;
+
+  @include rem(font-size, 11px);
+}
+
+.article__image {
+  display: block;
+  cursor: pointer;
+
+  width: 100%;
+  height: 0;
+  margin-bottom: $minor-y;
+
+  background: $col-bg-image-placeholder;
+  border: 1px solid $col-border-image-placeholder;
+}
+
+  .article__image--4x3 {
+    padding-bottom: 75%;
+  }
+
+  .article__image--1x1 {
+    padding-bottom: 100%;
+  }
+
+.article__body {
+  /* Hack to allow us to move the "more" links around in order */
+  @include mq-min-width("small") {
+    display: table;
+    position: relative;
+  }
+}
+
+.article__para {
+  margin-bottom: 1em;
+
+  @include mq-min-width("small") {
+    .article--lead & {
+      /* Allow more links to sit next to paragraphs */
+      float: left;
+
+      &:first-child {
+        /* Make room for more links */
+        width: 70%;
+      }
+    }
+  }
+}
+
+.article__more {
+  .article--lead & {
+    /* Move to the top right of the article__body div */
+    @include mq-min-width("small") {
+      display: table-header-group;
+      width: 30%;
+      position: absolute;
+      right: 0;
+      padding-left: $minor-x;
+    }
+  }
+
+  margin-bottom: $major-y;
+}
+
+.article__more-header {
+  @include rem(font-size, 18px);
+  @extend %font-serif;
+  font-weight: bold;
+}
+
+.article__more-links {
+  list-style: disc;
+  padding-left: $major-x;
+}

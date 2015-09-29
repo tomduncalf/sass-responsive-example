@@ -1,0 +1,20 @@
+.header {
+  margin-bottom: $major-y + $minor-y;
+}
+
+.header-logo {
+  float: left;
+
+  width: $major-x * 2;
+  height: $major-y * 2;
+  margin-right: $minor-y;
+
+  background: red;
+}
+
+.header-title {
+  @extend %font-serif;
+  @include rem(font-size, 36px);
+  font-style: italic;
+  line-height: $major-x * 2;
+}
