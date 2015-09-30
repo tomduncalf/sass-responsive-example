@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <title>SASS Layout Example</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>
+  function toggleMenu() {
+    document.querySelector('.menu-links').classList.toggle('visible');
+  }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-logo"></div>
+      <h1 class="header-title">Company Name</h1>
+    </header>
+
+    <nav class="menu">
+      <a href="#" class="menu-button" onclick="toggleMenu()">Menu</a>
+      <ul class="menu-links">
+        <li class="menu-links__item"><a href="#" class="menu-links__link">Home</a></li>
+        <li class="menu-links__item"><a href="#" class="menu-links__link">eBooks</a></li>
+        <li class="menu-links__item"><a href="#" class="menu-links__link">Magazines</a></li>
+        <li class="menu-links__item"><a href="#" class="menu-links__link">Movies</a></li>
+        <li class="menu-links__item"><a href="#" class="menu-links__link">Help</a></li>
+        <li class="menu-links__item"><a href="#" class="menu-links__link">Login</a></li>
+      </ul>
+    </nav>
+
+    <article class="article article--lead">
+      <h2 class="article__header"><a href="#">Lorem Ipsum Dolor Sit</a></h2>
+      <p class="article__meta">posted on 15 May 2015 by Author</p>
+
+      <a class="article__image article__image--4x3"></a>
+
+      <div class="article__body">
+        <p class="article__para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet finibus purus quis condimentum. Nunc elementum tristique urna nec molestie. Mauris vel mauris erat. Nunc at nunc suscipit, viverra nunc eget, vestibulum neque. Nullam eu maximus purus. Aenean sit amet odio fermentum, luctus arcu eget, cursus elit. Pellentesque dapibus semper malesuada. Donec erat nunc, cursus quis neque sit amet, maximus molestie metus.</p>
+
+        <p class="article__para">Integer non suscipit sapien. Vestibulum ultrices dui non feugiat scelerisque. Morbi vel enim felis. Sed tincidunt dolor dapibus tempus ultrices. Fusce commodo, ipsum elementum rutrum semper, nibh metus convallis ipsum, et bibendum neque tortor id urna. Fusce nec dui orci. Morbi sit amet sem at nulla euismod lacinia. Etiam hendrerit blandit tincidunt.</p>
+
+        <div class="article__more">
+          <h3 class="article__more-header">More...</h3>
+          <ul class="article__more-links">
+            <li class="article__more-link"><a href="#">Link #1</a></li>
+            <li class="article__more-link"><a href="#">Link #2</a></li>
+            <li class="article__more-link"><a href="#">Link #3</a></li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="article article--secondary">
+      <h2 class="article__header"><a href="#">A guide to snoopsetting</a></h2>
+
+      <a class="article__image article__image--1x1"></a>
+    </article>
+
+    <article class="article article--secondary">
+      <h2 class="article__header"><a href="#">Welcome to the Surveillance State</a></h2>
+
+      <a class="article__image article__image--1x1"></a>
+    </article>
+  </div> <!-- container -->
+
+  <footer class="footer">
+  </footer>
+</body>
+</html>
